@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabão Do Bacana — +50 Fórmulas de Sabão Caseiro</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --verde: #2d7a4f;
+    --verde-escuro: #1a4d32;
+    --verde-claro: #4aab70;
+    --amarelo: #f5b800;
+    --amarelo-hover: #d9a200;
+    --fundo: #0f1f16;
+    --fundo2: #152a1e;
+    --texto: #f0f7f2;
+    --cinza: #8fa89a;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── TOPO ─── */
+  .topo {
+    background: var(--verde-escuro);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--verde-claro);
+  }
+  .topo span { color: var(--amarelo); }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(160deg, #0f1f16 0%, #1a3d26 50%, #0f1f16 100%);
+    padding: 60px 20px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(74,171,112,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--verde);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(28px, 5vw, 54px);
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 780px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 span { color: var(--amarelo); }
+  .hero p.sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: #b5d4c0;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  /* ─── VIDEO ─── */
+  .video-wrap {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    border: 2px solid rgba(74,171,112,0.3);
+    aspect-ratio: 16/9;
+    background: #0a1a10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+  }
+  .video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  .video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: var(--cinza);
+  }
+  .play-btn {
+    width: 72px; height: 72px;
+    background: var(--amarelo);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    color: #000;
+    box-shadow: 0 0 0 12px rgba(245,184,0,0.2);
+  }
+
+  /* ─── CTA BOTAO ─── */
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--amarelo) 0%, #ff9900 100%);
+    color: #1a0a00;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 800;
+    padding: 20px 48px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 32px rgba(245,184,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  .cta-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 40px rgba(245,184,0,0.55);
+  }
+  .cta-btn:active { transform: translateY(0); }
+
+  .preco-info {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--cinza);
+  }
+  .preco-info strong { color: var(--verde-claro); font-size: 18px; }
+  .seguro {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #6a8a76;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* ─── SECOES ─── */
+  section { padding: 60px 20px; }
+  .container { max-width: 800px; margin: 0 auto; }
+  .secao-titulo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .secao-titulo span { color: var(--amarelo); }
+
+  /* ─── PROBLEMA ─── */
+  .problema { background: var(--fundo2); }
+  .problema-lista {
+    display: grid;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .problema-item {
+    background: rgba(255,80,80,0.08);
+    border: 1px solid rgba(255,80,80,0.2);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 16px;
+  }
+  .problema-item .icone { font-size: 20px; flex-shrink: 0; }
+
+  /* ─── O QUE VOCE LEVA ─── */
+  .produto-capa {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .mockup {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--fundo2));
+    border: 2px solid var(--verde);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+  .mockup .emoji { font-size: 64px; display: block; margin-bottom: 12px; }
+  .mockup .titulo-produto {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--amarelo);
+  }
+  .lista-beneficios { flex: 1; min-width: 260px; }
+  .beneficio {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(74,171,112,0.15);
+    font-size: 16px;
+  }
+  .beneficio:last-child { border-bottom: none; }
+  .beneficio .check {
+    color: var(--verde-claro);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ─── CATEGORIAS ─── */
+  .categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .categoria-card {
+    background: var(--fundo2);
+    border: 1px solid rgba(74,171,112,0.25);
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .categoria-card .icone { font-size: 36px; margin-bottom: 12px; }
+  .categoria-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--verde-claro); }
+  .categoria-card p { font-size: 13px; color: var(--cinza); }
+
+  /* ─── BONUS ─── */
+  .bonus-box {
+    background: linear-gradient(135deg, #1a3d26, #0f2a1a);
+    border: 2px solid var(--amarelo);
+    border-radius: 20px;
+    padding: 36px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .bonus-tag {
+    background: var(--amarelo);
+    color: #1a0a00;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .bonus-box h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .bonus-box p { color: #b5d4c0; font-size: 16px; margin-bottom: 20px; }
+  .bonus-valor {
+    font-size: 14px;
+    color: var(--cinza);
+  }
+  .bonus-valor del { color: #ff6b6b; }
+  .bonus-valor strong { color: var(--verde-claro); font-size: 18px; }
+
+  /* ─── PARA QUEM E ─── */
+  .para-quem { background: var(--fundo2); }
+  .para-quem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .para-card {
+    background: var(--fundo);
+    border: 1px solid rgba(74,171,112,0.2);
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .para-card .icone { font-size: 40px; margin-bottom: 12px; }
+  .para-card p { font-size: 15px; font-weight: 600; }
+
+  /* ─── PRECO FINAL ─── */
+  .preco-section {
+    background: linear-gradient(160deg, #1a3d26, #0f2a1a);
+    text-align: center;
+  }
+  .preco-box {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(74,171,112,0.3);
+    border-radius: 24px;
+    padding: 48px 32px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .preco-de {
+    font-size: 18px;
+    color: var(--cinza);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+  .preco-por {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--amarelo);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .preco-por sup { font-size: 32px; vertical-align: top; margin-top: 14px; display: inline-block; }
+  .preco-por sub { font-size: 22px; }
+  .preco-nota { font-size: 14px; color: var(--cinza); margin-bottom: 32px; }
+
+  /* ─── GARANTIA ─── */
+  .garantia-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(74,171,112,0.08);
+    border: 1px solid rgba(74,171,112,0.25);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 32px auto 0;
+    max-width: 520px;
+    text-align: left;
+  }
+  .garantia-box .icone { font-size: 48px; flex-shrink: 0; }
+  .garantia-box h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: var(--verde-claro); }
+  .garantia-box p { font-size: 14px; color: var(--cinza); }
+
+  /* ─── FAQ ─── */
+  .faq-lista { max-width: 640px; margin: 0 auto; display: grid; gap: 12px; }
+  .faq-item {
+    background: var(--fundo2);
+    border: 1px solid rgba(74,171,112,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .faq-item h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--verde-claro); }
+  .faq-item p { font-size: 14px; color: #9ab5a5; }
+
+  /* ─── RODAPE ─── */
+  footer {
+    background: #080f0b;
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 13px;
+    color: #4a6455;
+    border-top: 1px solid #1a3020;
+  }
+  footer a { color: #5a8a6a; text-decoration: none; }
+
+  /* ─── PULSE ANIMATION ─── */
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 8px 32px rgba(245,184,0,0.4); }
+    50% { box-shadow: 0 8px 48px rgba(245,184,0,0.7); }
+  }
+  .cta-btn { animation: pulse 2.5s infinite; }
+  .cta-btn:hover { animation: none; }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 600px) {
+    .preco-por { font-size: 56px; }
+    .bonus-box { padding: 28px 20px; }
+    .garantia-box { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPO -->
+<div class="topo">
+  🔥 OFERTA LIMITADA — <span>Acesso imediato após o pagamento</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="badge">🧼 Produto Digital</div>
+    <h1>+50 Fórmulas de Sabão Caseiro para <span>Economizar ou Vender</span> Todo Mês</h1>
+    <p class="sub">Receitas testadas, fáceis de fazer e com ingredientes que você encontra em qualquer mercado — por um valor que cabe no seu bolso.</p>
+
+    <!-- VIDEO -->
+    <div class="video-wrap" id="video-container">
+      <video id="video-headline" controls autoplay muted playsinline
+        style="width:100%;height:100%;object-fit:cover;">
+        <source src="video-headline.mp4" type="video/mp4">
+      </video>
+    </div>
+    <script>
+      var v = document.getElementById('video-headline');
+      v.addEventListener('loadedmetadata', function() {
+        v.currentTime = 6;
+      });
+      v.addEventListener('timeupdate', function() {
+        if (v.currentTime >= 30) {
+          v.currentTime = 6;
+        }
+      });
+    </script>
+
+    <!-- CTA -->
+    <a href="https://pay.cakto.com.br/36achh2_951897" class="cta-btn">
+      Quero as 50 Fórmulas Agora →
+    </a>
+    <div class="preco-info">
+      por apenas <strong>R$10,00</strong> — acesso imediato
+    </div>
+    <div class="seguro">🔒 Pagamento 100% seguro via Cakto</div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="problema">
+  <div class="container">
+    <h2 class="secao-titulo">Você já passou por isso? 👇</h2>
+    <div class="problema-lista">
+      <div class="problema-item">
+        <span class="icone">💸</span>
+        <span>Gasta uma fortuna todo mês em produtos de limpeza e não sabe como reduzir esse gasto</span>
+      </div>
+      <div class="problema-item">
+        <span class="icone">🔍</span>
+        <span>Fica pesquisando receitas na internet mas não sabe quais realmente funcionam</span>
+      </div>
+      <div class="problema-item">
+        <span class="icone">😓</span>
+        <span>Quer uma renda extra mas não tem dinheiro para investir em algo complicado</span>
+      </div>
+      <div class="problema-item">
+        <span class="icone">🧪</span>
+        <span>Tentou fazer sabão em casa e não ficou com a qualidade que esperava</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCE LEVA -->
+<section>
+  <div class="container">
+    <h2 class="secao-titulo">O que você recebe <span>hoje mesmo</span></h2>
+    <div class="produto-capa">
+      <div class="mockup">
+        <span class="emoji">🧼</span>
+        <div class="titulo-produto">Sabão Do Bacana</div>
+        <div style="font-size:13px;color:#6a8a76;margin-top:6px;">+50 Fórmulas</div>
+      </div>
+      <div class="lista-beneficios">
+        <div class="beneficio"><span class="check">✅</span><span><strong>50 fórmulas completas</strong> com ingredientes, modo de preparo e dicas</span></div>
+        <div class="beneficio"><span class="check">✅</span><span>Receitas para <strong>limpeza geral, roupas, pele, líquido</strong> e especiais</span></div>
+        <div class="beneficio"><span class="check">✅</span><span>Ingredientes <strong>fáceis de encontrar</strong> no mercado ou loja de atacado</span></div>
+        <div class="beneficio"><span class="check">✅</span><span>Fórmulas testadas para <strong>vender</strong> ou usar em casa</span></div>
+        <div class="beneficio"><span class="check">✅</span><span><strong>PDF otimizado</strong> para imprimir ou salvar no celular</span></div>
+        <div class="beneficio"><span class="check">✅</span><span>Acesso <strong>vitalício</strong> — baixa uma vez e usa para sempre</span></div>
+      </div>
+    </div>
+
+    <!-- CATEGORIAS -->
+    <div class="categorias-grid">
+      <div class="categoria-card">
+        <div class="icone">🏠</div>
+        <h3>Limpeza Geral</h3>
+        <p>10 fórmulas para casa, chão, banheiro e cozinha</p>
+      </div>
+      <div class="categoria-card">
+        <div class="icone">👕</div>
+        <h3>Sabão para Roupas</h3>
+        <p>10 receitas que limpam fundo e preservam o tecido</p>
+      </div>
+      <div class="categoria-card">
+        <div class="icone">🌿</div>
+        <h3>Sabonete para Pele</h3>
+        <p>10 fórmulas naturais para pele sensível e normal</p>
+      </div>
+      <div class="categoria-card">
+        <div class="icone">💧</div>
+        <h3>Sabão Líquido</h3>
+        <p>10 receitas práticas de sabão líquido multiuso</p>
+      </div>
+      <div class="categoria-card">
+        <div class="icone">⭐</div>
+        <h3>Especiais & Funcionais</h3>
+        <p>10 fórmulas diferenciadas para vender com margem alta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section style="background: var(--fundo2); padding: 60px 20px;">
+  <div class="container">
+    <h2 class="secao-titulo">Leve também o <span>Bônus Exclusivo</span></h2>
+    <div class="bonus-box">
+      <div class="bonus-tag">⭐ Bônus — Opcional</div>
+      <h3>Lista de Fornecedores Online</h3>
+      <p>30 fornecedores nacionais com os melhores preços de atacado para comprar seus insumos e maximizar o lucro nas vendas.</p>
+      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;">
+        <div style="text-align:center;">
+          <div style="font-size:28px;font-weight:900;color:var(--amarelo);">30</div>
+          <div style="font-size:12px;color:var(--cinza);">fornecedores</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:28px;font-weight:900;color:var(--amarelo);">5</div>
+          <div style="font-size:12px;color:var(--cinza);">categorias</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:28px;font-weight:900;color:var(--amarelo);">100%</div>
+          <div style="font-size:12px;color:var(--cinza);">online</div>
+        </div>
+      </div>
+      <div class="bonus-valor">
+        Valor real: <del>R$27,00</del> — hoje por <strong>+R$9,99</strong> no mesmo pedido
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM E -->
+<section class="para-quem">
+  <div class="container">
+    <h2 class="secao-titulo">Para quem é esse produto?</h2>
+    <div class="para-quem-grid">
+      <div class="para-card">
+        <div class="icone">👩‍🍳</div>
+        <p>Quem quer economizar na limpeza da casa</p>
+      </div>
+      <div class="para-card">
+        <div class="icone">💰</div>
+        <p>Quem busca uma renda extra vendendo sabão</p>
+      </div>
+      <div class="para-card">
+        <div class="icone">🌱</div>
+        <p>Quem prefere produtos naturais e artesanais</p>
+      </div>
+      <div class="para-card">
+        <div class="icone">🎁</div>
+        <p>Quem quer presentear com algo feito em casa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECO FINAL -->
+<section class="preco-section">
+  <div class="container">
+    <h2 class="secao-titulo">Garanta agora por <span>R$10,00</span></h2>
+    <div class="preco-box">
+      <div class="preco-de">De R$47,00</div>
+      <div class="preco-por">
+        <sup>R$</sup>10<sub>,00</sub>
+      </div>
+      <div class="preco-nota">pagamento único — acesso vitalício</div>
+
+      <a href="https://pay.cakto.com.br/36achh2_951897" class="cta-btn" style="display:block;text-align:center;">
+        Quero as 50 Fórmulas Agora →
+      </a>
+
+      <div style="margin-top:16px;font-size:13px;color:#5a8a6a;">
+        🎁 No checkout, adicione a Lista de Fornecedores por apenas +R$9,99
+      </div>
+
+      <div style="display:flex;justify-content:center;gap:20px;margin-top:20px;flex-wrap:wrap;">
+        <span style="font-size:13px;color:#4a6455;">🔒 SSL Seguro</span>
+        <span style="font-size:13px;color:#4a6455;">💳 Cartão ou Pix</span>
+        <span style="font-size:13px;color:#4a6455;">📲 Acesso imediato</span>
+      </div>
+    </div>
+
+    <div class="garantia-box">
+      <div class="icone">🛡️</div>
+      <div>
+        <h4>Garantia de 7 dias</h4>
+        <p>Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background: var(--fundo2);">
+  <div class="container">
+    <h2 class="secao-titulo">Perguntas frequentes</h2>
+    <div class="faq-lista">
+      <div class="faq-item">
+        <h4>Como recebo o produto após comprar?</h4>
+        <p>Assim que o pagamento for confirmado, você recebe o link de acesso imediatamente por e-mail e na página de obrigado.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Precisa ter experiência para fazer as fórmulas?</h4>
+        <p>Não. Todas as receitas são escritas de forma simples, com passo a passo e lista de ingredientes acessíveis.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Posso vender os sabões que fizer?</h4>
+        <p>Sim! As fórmulas são de uso pessoal e comercial. Você pode fazer e vender à vontade.</p>
+      </div>
+      <div class="faq-item">
+        <h4>O bônus é obrigatório?</h4>
+        <p>Não. O produto principal custa R$10,00. No checkout você pode adicionar a Lista de Fornecedores por +R$9,99 — mas é opcional.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Funciona no celular?</h4>
+        <p>Sim. O PDF é otimizado para visualização no celular, tablet ou computador. Também pode imprimir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="text-align:center;padding:60px 20px;background:var(--fundo);">
+  <div class="container">
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,40px);font-weight:800;margin-bottom:16px;">
+      Pronto para começar?
+    </h2>
+    <p style="color:#8fa89a;margin-bottom:36px;font-size:17px;">
+      +50 fórmulas de sabão caseiro por apenas R$10,00
+    </p>
+    <a href="https://pay.cakto.com.br/36achh2_951897" class="cta-btn">
+      Quero Comprar Agora →
+    </a>
+    <div class="seguro" style="margin-top:14px;">🔒 Pagamento seguro — Acesso imediato</div>
+  </div>
+</section>
+
+<!-- RODAPE -->
+<footer>
+  <p>© 2025 Sabão Do Bacana. Todos os direitos reservados.</p>
+  <p style="margin-top:6px;">
+    <a href="#">Política de Privacidade</a> &nbsp;|&nbsp;
+    <a href="#">Termos de Uso</a> &nbsp;|&nbsp;
+    <a href="#">Suporte</a>
+  </p>
+</footer>
+
+</body>
+</html>
